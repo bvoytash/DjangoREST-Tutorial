@@ -1,9 +1,27 @@
 from rest_framework import serializers
 
-from TestRestProject.Customer.models import Customer
+from TestRestProject.Customer.models import Customer, Document, Profession, DataSheet
 
 
 class CustomerSerializer(serializers.ModelSerializer):
     class Meta:
         model = Customer
-        fields = ['id', 'name', 'address', 'professions', 'data_sheet']
+        fields = ['id', 'name', 'address', 'professions', 'data_sheet', 'active']
+
+
+class DocumentSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Document
+        fields = ['id', 'dtype', 'doc_number', 'customer']
+
+
+class ProfessionSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Profession
+        fields = ['id', 'description']
+
+
+class DataSheetSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = DataSheet
+        fields = ['id', 'description', 'historical_data']
