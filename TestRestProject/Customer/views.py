@@ -11,6 +11,19 @@ class CustomerViewSet(viewsets.ModelViewSet):
     queryset = Customer.objects.all()
     serializer_class = CustomerSerializer
 
+    def get_queryset(self):
+        address = self.request.query_params.get('address', None)
+        if self.request.query_params.get('active') == "False":
+            status = False
+        else:
+            status = True
+
+        if address:
+            customers = Customer.objects.filter(address__icontains=address, active=status)
+        else:
+            customers = Customer.objects.filter(active=status)
+        return customers
+
     @action(detail=True)
     # add a custom behavior. Deactivate customer by /pk/deactivate
     def deactivate(self, request, **kwargs):

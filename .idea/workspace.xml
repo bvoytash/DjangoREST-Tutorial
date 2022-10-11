@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bd281fee-1eb5-4018-8c37-681ee74d4b44" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/TestRestProject/Customer/migrations/0002_customer_active.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestRestProject/Customer/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/TestRestProject/Customer/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestRestProject/Customer/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/TestRestProject/Customer/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TestRestProject/Customer/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/TestRestProject/Customer/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestRestProject/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/TestRestProject/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +79,7 @@
       <option name="presentableId" value="Default" />
       <updated>1665417394796</updated>
       <workItem from="1665417399173" duration="3680000" />
-      <workItem from="1665488540783" duration="2698000" />
+      <workItem from="1665488540783" duration="5406000" />
     </task>
     <servers />
   </component>
