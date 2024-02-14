@@ -98,7 +98,7 @@
       <workItem from="1707906482953" duration="140000" />
       <workItem from="1707915243753" duration="1472000" />
       <workItem from="1707919749747" duration="6642000" />
-      <workItem from="1707943103531" duration="2967000" />
+      <workItem from="1707943103531" duration="5631000" />
     </task>
     <servers />
   </component>
@@ -121,7 +121,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/TestRestProject/Customer/views.py</url>
-          <line>31</line>
+          <line>33</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

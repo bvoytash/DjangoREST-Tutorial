@@ -14,8 +14,8 @@ from TestRestProject.Customer.serializers import CustomerSerializer, DocumentSer
 class CustomerViewSet(viewsets.ModelViewSet):
     queryset = Customer.objects.all()
     serializer_class = CustomerSerializer
-    filter_backends = [filters.SearchFilter, DjangoFilterBackend]
-    # filter_backends = [DjangoFilterBackend]
+    filter_backends = [filters.SearchFilter, DjangoFilterBackend, filters.OrderingFilter]
+    filter_fields = ["name"]
 
     '''
     lookup_prefixes = {
@@ -26,6 +26,8 @@ class CustomerViewSet(viewsets.ModelViewSet):
     }
     '''
     search_fields = ['name', 'address', 'professions__description']
+    ordering_fields = ['id', 'name']
+    # ordering = ['name', 'id']
 
     def get_queryset(self):
         # searching by address ?address=some_address
