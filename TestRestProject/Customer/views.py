@@ -1,8 +1,10 @@
 from django.shortcuts import render
 from django_filters.rest_framework import DjangoFilterBackend
+from rest_framework import filters
 from rest_framework import viewsets
 from rest_framework.decorators import action
 from rest_framework.response import Response
+
 
 from TestRestProject.Customer.models import Customer, Document, Profession, DataSheet
 from TestRestProject.Customer.serializers import CustomerSerializer, DocumentSerializer, ProfessionSerializer, \
@@ -12,7 +14,18 @@ from TestRestProject.Customer.serializers import CustomerSerializer, DocumentSer
 class CustomerViewSet(viewsets.ModelViewSet):
     queryset = Customer.objects.all()
     serializer_class = CustomerSerializer
-    filterset_fields = ['name']
+    filter_backends = [filters.SearchFilter, DjangoFilterBackend]
+    # filter_backends = [DjangoFilterBackend]
+
+    '''
+    lookup_prefixes = {
+     '^': 'istartswith',
+     '=': 'iexact',
+     '@': 'search',
+     '$': 'iregex',
+    }
+    '''
+    search_fields = ['name', 'address', 'professions__description']
 
     def get_queryset(self):
         # searching by address ?address=some_address
