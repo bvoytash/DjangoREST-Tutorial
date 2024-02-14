@@ -1,17 +1,21 @@
 from django.shortcuts import render
+from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import viewsets
 from rest_framework.decorators import action
 from rest_framework.response import Response
 
 from TestRestProject.Customer.models import Customer, Document, Profession, DataSheet
-from TestRestProject.Customer.serializers import CustomerSerializer, DocumentSerializer, ProfessionSerializer, DataSheetSerializer
+from TestRestProject.Customer.serializers import CustomerSerializer, DocumentSerializer, ProfessionSerializer, \
+    DataSheetSerializer
 
 
 class CustomerViewSet(viewsets.ModelViewSet):
     queryset = Customer.objects.all()
     serializer_class = CustomerSerializer
+    filterset_fields = ['name']
 
     def get_queryset(self):
+        # searching by address ?address=some_address
         address = self.request.query_params.get('address', None)
         if self.request.query_params.get('active') == "False":
             status = False

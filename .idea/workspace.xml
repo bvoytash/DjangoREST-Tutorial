@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bd281fee-1eb5-4018-8c37-681ee74d4b44" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TestRestProject/Customer/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/TestRestProject/Customer/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestRestProject/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/TestRestProject/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,13 +34,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Language Defaults"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/TestRestProject" />
@@ -79,7 +88,18 @@
       <option name="presentableId" value="Default" />
       <updated>1665417394796</updated>
       <workItem from="1665417399173" duration="3680000" />
-      <workItem from="1665488540783" duration="5406000" />
+      <workItem from="1665488540783" duration="6194000" />
+      <workItem from="1690182413397" duration="242000" />
+      <workItem from="1690552156274" duration="1659000" />
+      <workItem from="1690553883704" duration="225000" />
+      <workItem from="1690984637024" duration="80000" />
+      <workItem from="1705487443102" duration="204000" />
+      <workItem from="1705505237896" duration="187000" />
+      <workItem from="1705588434679" duration="67000" />
+      <workItem from="1705588606648" duration="146000" />
+      <workItem from="1707906482953" duration="140000" />
+      <workItem from="1707915243753" duration="1472000" />
+      <workItem from="1707919749747" duration="6235000" />
     </task>
     <servers />
   </component>
@@ -96,5 +116,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/TestRestProject/Customer/views.py</url>
+          <line>18</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
