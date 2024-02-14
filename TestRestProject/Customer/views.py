@@ -13,6 +13,7 @@ class CustomerViewSet(viewsets.ModelViewSet):
     queryset = Customer.objects.all()
     serializer_class = CustomerSerializer
     filterset_fields = ['name']
+    a = 5
 
     def get_queryset(self):
         # searching by address ?address=some_address
