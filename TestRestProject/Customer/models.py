@@ -7,6 +7,10 @@ class Profession(models.Model):
     def __str__(self):
         return self.description
 
+    @property
+    def status_profession(self):
+        return "Active"
+
 
 class DataSheet(models.Model):
     description = models.CharField(max_length=50)
