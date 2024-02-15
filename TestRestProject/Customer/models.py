@@ -26,6 +26,18 @@ class Customer(models.Model):
     def __str__(self):
         return self.name
 
+    @property
+    def status_message(self):
+        if self.active:
+            return "Customer is active"
+        else:
+            return "Customer is NOT active"
+
+    # custom field in the serializer without property;
+    # add additional custom logic
+    def num_professions(self):
+        return self.professions.all().count()
+
 
 class Document(models.Model):
     PP = "PP"
