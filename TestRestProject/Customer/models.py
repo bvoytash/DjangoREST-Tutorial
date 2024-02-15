@@ -55,4 +55,4 @@ class Document(models.Model):
     customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.dtype
+        return self.doc_number

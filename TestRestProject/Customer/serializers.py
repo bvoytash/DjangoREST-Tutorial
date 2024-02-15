@@ -4,12 +4,14 @@ from TestRestProject.Customer.models import Customer, Document, Profession, Data
 
 
 class CustomerSerializer(serializers.ModelSerializer):
-    num_professions = serializers.SerializerMethodField  # should write it with get_.....
+    num_professions = serializers.SerializerMethodField()  # should write it with get_.....
+    professions = serializers.StringRelatedField(many=True)
+    document_set = serializers.StringRelatedField(many=True)
 
     class Meta:
         model = Customer
         fields = ['id', 'name', 'address', 'professions',
-                  'status_message', 'data_sheet', 'active', 'num_professions']
+                  'status_message', 'data_sheet', 'active', 'num_professions', 'document_set']
 
     def get_num_professions(self, obj):
         return obj.num_professions()
