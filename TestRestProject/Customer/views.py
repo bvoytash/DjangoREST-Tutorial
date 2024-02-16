@@ -2,9 +2,10 @@ from django.shortcuts import render
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import filters
 from rest_framework import viewsets
+from rest_framework.authentication import TokenAuthentication
 from rest_framework.decorators import action
+from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
-
 
 from TestRestProject.Customer.models import Customer, Document, Profession, DataSheet
 from TestRestProject.Customer.serializers import CustomerSerializer, DocumentSerializer, ProfessionSerializer, \
@@ -16,6 +17,7 @@ class CustomerViewSet(viewsets.ModelViewSet):
     serializer_class = CustomerSerializer
     filter_backends = [filters.SearchFilter, DjangoFilterBackend, filters.OrderingFilter]
     filter_fields = ["name"]
+    authentication_classes = [TokenAuthentication]
 
     '''
     lookup_prefixes = {
@@ -27,6 +29,7 @@ class CustomerViewSet(viewsets.ModelViewSet):
     '''
     search_fields = ['name', 'address', 'professions__description']
     ordering_fields = ['id', 'name']
+
     # ordering = ['name', 'id']
 
     def get_queryset(self):
@@ -69,8 +72,10 @@ class DocumentViewSet(viewsets.ModelViewSet):
 class ProfessionViewSet(viewsets.ModelViewSet):
     queryset = Profession.objects.all()
     serializer_class = ProfessionSerializer
+    authentication_classes = [TokenAuthentication, ]
 
 
 class DataSheetViewSet(viewsets.ModelViewSet):
     queryset = DataSheet.objects.all()
     serializer_class = DataSheetSerializer
+    permission_classes = [AllowAny, ]
