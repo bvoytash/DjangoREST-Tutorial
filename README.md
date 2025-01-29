@@ -20,13 +20,13 @@ source .venv/bin/activate  # On macOS/Linux
 
 ### 3️⃣ Install Dependencies
 ```sh
-pip install --upgrade pip
+pip install --upgrade pip # On macOS/Linux
+python -m pip install --upgrade pip # On Windows
 pip install -r requirements.txt
 ```
 
 ### 4️⃣ Apply Migrations
 ```sh
-python -m pip install --upgrade pip
 python manage.py migrate
 ```
 
