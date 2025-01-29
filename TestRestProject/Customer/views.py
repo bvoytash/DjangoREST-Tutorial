@@ -17,7 +17,8 @@ class CustomerViewSet(viewsets.ModelViewSet):
     serializer_class = CustomerSerializer
     filter_backends = [filters.SearchFilter, DjangoFilterBackend, filters.OrderingFilter]
     filter_fields = ["name"]
-    authentication_classes = [TokenAuthentication]
+    # authentication_classes = [TokenAuthentication]
+    permission_classes = [AllowAny, ]
 
     '''
     lookup_prefixes = {
@@ -67,6 +68,7 @@ class CustomerViewSet(viewsets.ModelViewSet):
 class DocumentViewSet(viewsets.ModelViewSet):
     queryset = Document.objects.all()
     serializer_class = DocumentSerializer
+    permission_classes = [AllowAny, ]
 
 
 class ProfessionViewSet(viewsets.ModelViewSet):
