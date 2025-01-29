@@ -74,7 +74,8 @@ class DocumentViewSet(viewsets.ModelViewSet):
 class ProfessionViewSet(viewsets.ModelViewSet):
     queryset = Profession.objects.all()
     serializer_class = ProfessionSerializer
-    authentication_classes = [TokenAuthentication, ]
+    # authentication_classes = [TokenAuthentication, ]
+    permission_classes = [AllowAny]
 
 
 class DataSheetViewSet(viewsets.ModelViewSet):
